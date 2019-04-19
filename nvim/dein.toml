@@ -92,10 +92,10 @@ hook_add = '''
     let g:airline_symbols = {}
   endif
  
-  let g:airline_left_sep = '»'
-  let g:airline_left_sep = '▶'
-  let g:airline_right_sep = '«'
-  let g:airline_right_sep = '◀'
+  " let g:airline_left_sep = '»'
+  " let g:airline_left_sep = '▶'
+  " let g:airline_right_sep = '«'
+  " let g:airline_right_sep = '◀'
   let g:airline_symbols.crypt = '🔒'
   let g:airline_symbols.linenr = '☰'
   let g:airline_symbols.linenr = '␊'
@@ -112,10 +112,10 @@ hook_add = '''
   let g:airline_symbols.whitespace = 'Ξ'
 
   " airline symbols
-  let g:airline_left_sep = ''
-  let g:airline_left_alt_sep = ''
-  let g:airline_right_sep = ''
-  let g:airline_right_alt_sep = ''
+  " let g:airline_left_sep = ''
+  " let g:airline_left_alt_sep = ''
+  " let g:airline_right_sep = ''
+  " let g:airline_right_alt_sep = ''
   let g:airline_symbols.branch = ''
   let g:airline_symbols.readonly = ''
   let g:airline_symbols.linenr = ''
@@ -175,6 +175,14 @@ hook_add = '''
 # 自動pep8準拠のインデント
 [[plugins]]
 repo = 'Vimjas/vim-python-pep8-indent'
+
+# virtual env読み込み
+[[plugins]]
+repo = 'jmcantrell/vim-virtualenv'
+
+[[plugins]]
+repo = 'lambdalisue/vim-pyenv'
+
 
 [[plugins]] # toml syntax
 repo = 'cespare/vim-toml'
