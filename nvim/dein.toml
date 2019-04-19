@@ -206,6 +206,10 @@ repo = 'Shougo/context_filetype.vim'
 [[plugins]]
 repo = 'kassio/neoterm'
 
+# 即座実行
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
 # フロントエンド周り
 [[plugins]]
 repo = 'hail2u/vim-css3-syntax'
