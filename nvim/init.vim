@@ -66,17 +66,14 @@ if dein#load_state('/Users/arch/.cache/dein')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
   
-  let g:deoplete#enable_at_startup = 1
-  
-
   "仮想環境
   if exists("$VIRTUAL_ENV")
     let g:python_host_prog = '/usr/local/var/pyenv/versions/neovim2/bin/python'
-    let g:python3_host_prog = $VIRTUAL_ENV . '/bin/python'
-  else
-    let g:python_host_prog = $PYENV_ROOT . '/versions/neovim2/bin/python'
-    let g:python3_host_prog = $PYENV_ROOT . '/versions/neovim3/bin/python'
+    let g:python3_host_prog = '/usr/local/var/pyenv/versions/neovim3/bin/python'
   endif
+
+
+  let g:deoplete#enable_at_startup = 1
 
   let s:toml = '~/mac_dotfiles/nvim/dein.toml'
   let s:lazy_toml = '~/mac_dotfiles/nvim/dein_lazy.toml'
