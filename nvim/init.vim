@@ -71,7 +71,7 @@ if dein#load_state('/Users/arch/.cache/dein')
 
   "仮想環境
   if exists("$VIRTUAL_ENV")
-    let g:python_host_prog = $VIRTUAL_ENV . '/bin/python'
+    let g:python_host_prog = '/usr/local/var/pyenv/versions/neovim2/bin/python'
     let g:python3_host_prog = $VIRTUAL_ENV . '/bin/python'
   else
     let g:python_host_prog = $PYENV_ROOT . '/versions/neovim2/bin/python'
