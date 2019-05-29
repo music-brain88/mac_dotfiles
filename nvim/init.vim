@@ -60,13 +60,24 @@ if dein#load_state('/Users/arch/.cache/dein')
   call dein#add('/Users/arch/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here like this:
-  call dein#add('Shougo/deoplete.nvim')
+  "call dein#add('Shougo/deoplete.nvim')
   if !has('nvim')
     call dein#add('roxma/nvim-yarp')
     call dein#add('roxma/vim-hug-neovim-rpc')
   endif
   
   let g:deoplete#enable_at_startup = 1
+  
+
+  "仮想環境
+  if exists("$VIRTUAL_ENV")
+    let g:python_host_prog = $VIRTUAL_ENV . '/bin/python'
+    let g:python3_host_prog = $VIRTUAL_ENV . '/bin/python'
+  else
+    let g:python_host_prog = $PYENV_ROOT . '/versions/neovim2/bin/python'
+    let g:python3_host_prog = $PYENV_ROOT . '/versions/neovim3/bin/python'
+  endif
+
   let s:toml = '~/mac_dotfiles/nvim/dein.toml'
   let s:lazy_toml = '~/mac_dotfiles/nvim/dein_lazy.toml'
   call dein#load_toml(s:toml, {'lazy': 0})
@@ -123,6 +134,13 @@ call NERDTreeHighlightFile('js',     'Red',     'none', '#ffa500', 'none')
 call NERDTreeHighlightFile('php',    'Magenta', 'none', '#ff00ff', 'none')
 call NERDTreeHighlightFile('vue',    'Green', 'none', '#42b883', 'none')
 
+
+"LSP setting
+let g:lsp_preview_keep_focus = 0
+nmap <silent> <Subleader>N <Plug>(lsp-previous-error)
+nmap <silent> <Subleader>n <Plug>(lsp-next-error)
+nmap <silent> <Subleader>b <Plug>(lsp-document-diagnostics)
+nmap <silent> K <Plug>(lsp-hover)
 
 "-----------------------------------------------------------------------
 " Air line cuctom
