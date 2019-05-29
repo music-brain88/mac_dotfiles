@@ -67,10 +67,11 @@ if dein#load_state('/Users/arch/.cache/dein')
   endif
   
   "仮想環境
-  if exists("$VIRTUAL_ENV")
-    let g:python_host_prog = '/usr/local/var/pyenv/versions/neovim2/bin/python'
-    let g:python3_host_prog = '/usr/local/var/pyenv/versions/neovim3/bin/python'
+  "let g:python_host_prog = '/usr/local/var/pyenv/versions/neovim2/bin/python'
+  if has('nvim') && isdirectory( $PYENV_ROOT."/versions/nvim-python3" )
+    let g:python3_host_prog = $PYENV_ROOT.'/versions/nvim-python3/bin/python'
   endif
+  "let g:python3_host_prog = '/usr/local/var/pyenv/versions/neovim3/bin/python'
 
 
   let g:deoplete#enable_at_startup = 1

@@ -177,12 +177,12 @@ hook_add = '''
 repo = 'Vimjas/vim-python-pep8-indent'
 
 # virtual env読み込み
-[[plugins]]
-repo = 'jmcantrell/vim-virtualenv'
+# [[plugins]]
+# repo = 'jmcantrell/vim-virtualenv'
 
-[[plugins]]
-repo = 'lambdalisue/vim-pyenv'
-
+# [[plugins]]
+# repo = 'lambdalisue/vim-pyenv'
+#   on_ft = 'python'
 
 [[plugins]] # toml syntax
 repo = 'cespare/vim-toml'
