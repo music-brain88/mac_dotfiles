@@ -9,4 +9,6 @@ on_ft = ['md', 'markdown']
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
-build = './install.sh nightly'
+if = '''executable('node') && executable('yarn')'''
+build = 'coc#util#install()'
+merged = '0'
