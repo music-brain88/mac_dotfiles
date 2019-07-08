@@ -58,6 +58,7 @@ if dein#load_state('/Users/arch/.cache/dein')
   " Let dein manage dein
   " Required:
   call dein#add('/Users/arch/.cache/dein/repos/github.com/Shougo/dein.vim')
+  call dein#add('neoclide/coc.nvim', {'merge':0, 'rev': 'release'})
 
   " Add or remove your plugins here like this:
   "call dein#add('Shougo/deoplete.nvim')
@@ -67,11 +68,9 @@ if dein#load_state('/Users/arch/.cache/dein')
   endif
   
   "仮想環境
-  if exists("$VIRTUAL_ENV")
-    let g:python_host_prog = '/usr/local/var/pyenv/versions/neovim2/bin/python'
-    let g:python3_host_prog = '/usr/local/var/pyenv/versions/neovim3/bin/python'
+  "let g:python_host_prog = '/usr/local/var/pyenv/versions/neovim2/bin/python'
+  if has('nvim') && isdirectory( $PYENV_ROOT."/versions/neovim3" )
   endif
-
 
   let g:deoplete#enable_at_startup = 1
 
