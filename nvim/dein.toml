@@ -52,10 +52,12 @@ hook_add = '''
     " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
     if (has("termguicolors"))
       set termguicolors
+      let g:onedark_termcolors=256
     endif
   endif
   autocmd VimEnter * colorscheme onedark
 '''
+
 
 # コメント機能強化
 [[plugins]]
@@ -82,7 +84,7 @@ depends = ['vim-airline-themes']
 hook_add = '''
   
   let g:airline_powerline_fonts = 1
-
+  let g:airline_theme='onedark'
   let g:airline#extensions#hunks#enabled=0
   let g:airline#extensions#branch#enabled=1
   "-----------------------------------------------------------------------
